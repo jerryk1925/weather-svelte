@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -13,6 +13,9 @@ module.exports = {
     },
     mode: process.env.NODE_ENV,
     resolve: {
+        alias: {
+            src: path.resolve(__dirname, 'src/'),
+        },
         extensions: ['.mjs', '.js', '.svelte']
     },
     module: {
@@ -85,24 +88,23 @@ module.exports = {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
+                    name: 'images/[name]-[hash:base64:5].[ext]',
                 },
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader',
+                options: {
+                    removeSVGTagAttrs: true
+                }
             }
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             hash: false,
             template: './public/index.html',
         }),
-        new CopyWebpackPlugin([
-            {
-                from: 'src/**/*.png',
-                to: 'img',
-                cache: true,
-                force: true,
-                flatten: true,
-            },
-        ]),
     ]
 };

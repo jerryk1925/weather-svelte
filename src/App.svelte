@@ -1,12 +1,7 @@
-<div class="{css.a}">
-    <img src="./assets/main_banner.png" alt="">
-    qwe
-</div>
-
 <script>
-import css  from './App.css'
+import Forecast from 'src/components/Forecast'
 </script>
 
-<style>
-
-</style>
+<main>
+    <Forecast />
+</main>
