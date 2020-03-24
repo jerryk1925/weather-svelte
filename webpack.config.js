@@ -3,9 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-      ? '/' + process.env.CI_PROJECT_NAME + '/'
-      : '/',
     entry: {
         main: './src/main.js'
     },
