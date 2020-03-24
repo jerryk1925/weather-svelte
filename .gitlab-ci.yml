@@ -10,6 +10,9 @@ pages:
     - yarn install
     - yarn build
     - mv dist public
+    - rm index.html
+    - add dist/index.html
+    - add dist/main.js
   artifacts:
     paths:
       - public
