@@ -10,6 +10,7 @@ pages:
     - yarn install
     - yarn build
     - mv dist public
+    - cd public
     - rm index.html
     - add dist/index.html
     - add dist/main.js
