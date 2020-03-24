@@ -3,13 +3,13 @@ cache:
   paths:
     - node_modules/
 
-deploy:
+pages:
   image: node:latest
   stage: deploy
   script:
     - yarn install
     - yarn build
-    - mv public public-svelte
+    - mv public public-vue
     - mv dist public
     - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
   artifacts:
