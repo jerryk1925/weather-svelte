@@ -9,11 +9,8 @@ pages:
   script:
     - yarn install
     - yarn build
-    - mv dist public
-    - cd public
-    - rm index.html
-    - add dist/index.html
-    - add dist/main.js
+    - mv dist/main.js public
+    - mv dist/index.html public
   artifacts:
     paths:
       - public
