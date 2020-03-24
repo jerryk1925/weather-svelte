@@ -10,6 +10,7 @@ pages:
     - yarn install
     - yarn build
     - cd dist
+    - mv dist public
   artifacts:
     paths:
       - public
