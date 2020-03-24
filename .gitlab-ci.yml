@@ -9,7 +9,7 @@ pages:
   script:
     - yarn install
     - yarn build
-    - mv dist public
+    - cd dist
   artifacts:
     paths:
       - public
