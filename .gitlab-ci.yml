@@ -9,8 +9,7 @@ pages:
   script:
     - yarn install
     - yarn build
-    - mv dist/main.js public
-    - mv dist/index.html public
+    - cp dist/* public
   artifacts:
     paths:
       - public
