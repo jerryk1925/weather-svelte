@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -106,5 +107,13 @@ module.exports = {
             hash: false,
             template: './public/index.html',
         }),
+        new WebpackPwaManifest({
+            name: 'Weather',
+            short_name: 'Weather',
+            display: 'standalone',
+            background_color: '#7768E5',
+            "theme-color": '#7768E5',
+            crossorigin: 'use-credentials',
+        })
     ]
 };
