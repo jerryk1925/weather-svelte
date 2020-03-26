@@ -1,5 +1,3 @@
-import rain from 'src/assets/img/rain.png';
-
 export const WEATHER_DAYS = [
 	{
 		id: 0,
