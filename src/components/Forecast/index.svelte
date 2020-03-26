@@ -1,7 +1,7 @@
 <script>
     import { WEATHER_DAYS} from 'src/config'
     import ForecastDay from 'src/components/ForecastDay';
-    import css from './Forecast.css'
+    import css from './Forecast.css';
 
     const days = WEATHER_DAYS;
 

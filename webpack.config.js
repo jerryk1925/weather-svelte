@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const postcssVarsConfig = require('./postcss.vars.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
@@ -48,6 +49,10 @@ module.exports = {
                                             stage: 0,
                                             browsers: 'last 5 versions',
                                             autoprefixer: { grid: true },
+                                            'custom-media-queries': {
+                                                preserve: false,
+                                                importFrom: [postcssVarsConfig]
+                                            }
                                         }),
                                     ]
                                 },

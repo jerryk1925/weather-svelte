@@ -23,4 +23,4 @@ export const WEATHER_DAYS = [
 		maxTemp: 23,
 		icon: 'qwe'
 	},
-]
+];

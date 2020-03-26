@@ -1,0 +1,30 @@
+.wrapper{
+    background: white;
+    border: 3px dashed #7768E5;
+    width: 270px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    color: #7768E5;
+    padding: 10px 25px;
+    border-radius: 20px;
+    background: #EEEDFC;
+    border: 0;
+    cursor: pointer;
+    transition: .3s;
+    outline: none;
+
+    &:hover{
+        background: #7768E5;
+        color: white;
+    }
+
+     &:active{
+        box-shadow: 0 5px 10px 1px  #7768E5;
+    }
+}

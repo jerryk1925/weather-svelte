@@ -5,8 +5,8 @@
     export let maxTemp;
     export let icon;
 
-    import SvgIcon from 'src/components/SvgIcon'
-    import css from './ForecastDay.css';
+    import SvgIcon from 'src/components/SvgIcon';
+    import css from './ForecastDay.css'
 
 </script>
 
