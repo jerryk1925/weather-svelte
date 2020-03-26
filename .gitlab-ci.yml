@@ -3,13 +3,14 @@ cache:
   paths:
     - node_modules/
 
-pages:
+deploy:
   image: node:latest
   stage: deploy
   script:
     - yarn install
     - yarn build
     - cp dist/* public
+    - find public -type f -regex '.*\.\(htm\|html\|txt\|text\|js\|css\)$' -exec gzip -f -k {} \;
   artifacts:
     paths:
       - public

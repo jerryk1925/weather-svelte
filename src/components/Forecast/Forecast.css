@@ -1,3 +1,14 @@
 .wrapper{
     /*background: red;*/
+    margin-bottom: 40px;
+}
+
+.title{
+    font-size: 38px;
+
+}
+
+.subTitle{
+    font-size: 38px;
+    font-weight: 500;
 }

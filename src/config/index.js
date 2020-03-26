@@ -1,11 +1,13 @@
+import rain from 'src/assets/img/rain.png';
+
 export const WEATHER_DAYS = [
 	{
 		id: 0,
-		day: 'Friday',
+		day: 'Saturday',
 		precipitation: 'Rain',
 		minTemp: 32,
 		maxTemp: 23,
-		icon: ''
+		icon: 'rain'
 	},
 	{
 		id: 1,
@@ -13,7 +15,7 @@ export const WEATHER_DAYS = [
 		precipitation: 'Rain',
 		minTemp: 32,
 		maxTemp: 23,
-		icon: ''
+		icon: 'snow'
 	},
 	{
 		id: 2,
@@ -21,6 +23,6 @@ export const WEATHER_DAYS = [
 		precipitation: 'Rain',
 		minTemp: 32,
 		maxTemp: 23,
-		icon: ''
+		icon: 'qwe'
 	},
 ]

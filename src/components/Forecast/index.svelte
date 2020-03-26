@@ -3,13 +3,14 @@
     import ForecastDay from 'src/components/ForecastDay';
     import css from './Forecast.css'
 
-    let days = WEATHER_DAYS;
+    const days = WEATHER_DAYS;
 
 </script>
 
-<div class="{css.wrapper}">
-    <div>
-        Forecast
+<div>
+    <div class="{css.wrapper}">
+        <span class="{css.subTitle}">3 Days</span>
+        <span class="{css.title}">Forecast</span>
     </div>
     {#each days as day (day.id)}
         <ForecastDay {...day} />

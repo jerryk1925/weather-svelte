@@ -1,0 +1,48 @@
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper{
+    position: relative;
+    border-radius: 20px;
+    width: 250px;
+    background: white;
+    border: 1px solid #F2F2F3;
+
+
+    & + .wrapper{
+        margin-top: 20px;
+    }
+}
+
+.day{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.precipitation{
+    color: #B5B5BC;
+}
+
+.info{
+    composes: flex;
+    padding: 20px;
+}
+
+.imgWrapper{
+    margin-right: 15px;
+}
+
+.temperature{
+    top: -1px;
+    position: absolute;
+    right: 0;
+    padding: 32px 15px;
+    border-radius: 20px;
+    border: 1px solid #7967DF;
+    background: #7768E5;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
