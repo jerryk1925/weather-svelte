@@ -1,6 +1,7 @@
 .wrapper{
     padding: 20px;
     background: rgb(250, 250, 250);
+    flex-wrap: wrap;
     display: flex;
 
     @media (--root-media-medium) {

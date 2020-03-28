@@ -8,11 +8,17 @@
     border-radius: 20px;
     width: 250px;
     background: white;
+    transition: .3s;
+    cursor: pointer;
     border: 1px solid #F2F2F3;
 
 
     & + .wrapper{
         margin-top: 20px;
+    }
+
+    &:hover{
+        box-shadow: 0 10px 8px 0px rgba(0, 0, 0, 0.1);
     }
 }
 

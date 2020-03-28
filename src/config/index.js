@@ -24,3 +24,26 @@ export const WEATHER_DAYS = [
 		icon: 'qwe'
 	},
 ];
+
+export const WEATHER_CITY = [
+	{
+		id: 0,
+		temp: 29,
+		city: 'NewYork',
+		country: 'USA',
+		icon: 'snow',
+		humidity: '64%',
+		windSpeed: '8.3',
+		windPosition: 'West',
+	},
+	{
+		id: 1,
+		temp: 29,
+		city: 'NewYork',
+		country: 'USA',
+		icon: 'snow',
+		humidity: '64%',
+		windSpeed: '8.3',
+		windPosition: 'West',
+	}
+];

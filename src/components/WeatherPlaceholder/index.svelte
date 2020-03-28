@@ -5,13 +5,12 @@
 
     let count = 0;
     const qwe = () => {
-
+        const id = $weatherCity.length + 1;
         const city = {
-            name: 'Kyiv',
-            id: ++count
+            id
         };
-        weatherCity.addNewCity(city)
-        console.log($weatherCity)
+        weatherCity.addNewCity(city);
+        console.log($weatherCity);
     }
 
 
