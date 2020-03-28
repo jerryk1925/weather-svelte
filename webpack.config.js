@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const postcssVarsConfig = require('./postcss.vars.js');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -35,31 +35,16 @@ module.exports = {
             {
                 test: /\.svelte$/,
                 exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'svelte-loader',
-                        options: {
-                            hotReload: true,
-                            legacy: true,
-                            preprocess: require('svelte-preprocess')({
-                                postcss: {
-                                    plugins: [
-                                        require('postcss-nested'),
-                                        require('postcss-preset-env')({
-                                            stage: 0,
-                                            browsers: 'last 5 versions',
-                                            autoprefixer: { grid: true },
-                                            'custom-media-queries': {
-                                                preserve: false,
-                                                importFrom: [postcssVarsConfig]
-                                            }
-                                        }),
-                                    ]
-                                },
-                            })
-                        }
+                use: {
+                    loader: 'svelte-loader',
+                    options: {
+                        hotReload: true,
+                        emitCss: true,
+                        preprocess: require('svelte-preprocess')({
+                            postcss: true,
+                        })
                     }
-                ]
+                }
             },
             {
                 test: /\.css$/,
@@ -77,13 +62,24 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            ident: 'postcss',
                             plugins: [
                                 require('postcss-nested'),
                                 require('postcss-preset-env')({
-                                    stage: 0,
                                     browsers: 'last 5 versions',
-                                    autoprefixer: { grid: true },
+                                    autoprefixer: {grid: true},
+                                    stage: 0,
+                                    features: {
+                                        'custom-properties': {
+                                            "nesting-rules": true,
+                                            preserve: false,
+                                            importFrom: [postcssVarsConfig]
+                                        },
+                                        'custom-media-queries': {
+                                            "nesting-rules": true,
+                                            preserve: false,
+                                            importFrom: [postcssVarsConfig]
+                                        }
+                                    }
                                 }),
                             ]
                         }

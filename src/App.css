@@ -1,5 +1,9 @@
 .wrapper{
-    padding: 60px;
+    padding: 20px;
     background: rgb(250, 250, 250);
     display: flex;
+
+    @media (--root-media-medium) {
+        padding: 60px;
+    }
 }
