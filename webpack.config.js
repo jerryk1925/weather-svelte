@@ -105,11 +105,11 @@ module.exports = {
             hash: false,
             template: './public/index.html',
         }),
-        new WebpackPwaManifest({
-            name: 'Weather',
-            short_name: 'Weather',
-            display: 'standalone',
-            background_color: 'red',
-        })
+        // new WebpackPwaManifest({
+        //     name: 'Weather',
+        //     short_name: 'Weather',
+        //     display: 'standalone',
+        //     background_color: 'red',
+        // })
     ]
 };
