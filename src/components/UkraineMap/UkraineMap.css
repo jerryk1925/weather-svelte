@@ -1,0 +1,27 @@
+.land{
+    fill: #CCCCCC;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-opacity: 1;
+    transition: .3s;
+    stroke-width: 0.5;
+
+    &:hover{
+        fill: #7967DF;
+    }
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,.9);
+}

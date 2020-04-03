@@ -41,7 +41,28 @@ module.exports = {
                         hotReload: true,
                         emitCss: true,
                         preprocess: require('svelte-preprocess')({
-                            postcss: true,
+                            postcss: {
+                                plugins: [
+                                    require('postcss-nested'),
+                                    require('postcss-preset-env')({
+                                        browsers: 'last 5 versions',
+                                        autoprefixer: {grid: true},
+                                        stage: 0,
+                                        features: {
+                                            'custom-properties': {
+                                                "nesting-rules": true,
+                                                preserve: false,
+                                                importFrom: [postcssVarsConfig]
+                                            },
+                                            'custom-media-queries': {
+                                                "nesting-rules": true,
+                                                preserve: false,
+                                                importFrom: [postcssVarsConfig]
+                                            }
+                                        }
+                                    }),
+                                ]
+                            },
                         })
                     }
                 }
@@ -105,11 +126,11 @@ module.exports = {
             hash: false,
             template: './public/index.html',
         }),
-        // new WebpackPwaManifest({
-        //     name: 'Weather',
-        //     short_name: 'Weather',
-        //     display: 'standalone',
-        //     background_color: 'red',
-        // })
+        new WebpackPwaManifest({
+            name: 'Weather',
+            short_name: 'Weather',
+            display: 'standalone',
+            background_color: 'red',
+        })
     ]
 };
