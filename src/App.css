@@ -1,6 +1,8 @@
 .wrapper{
     padding: 20px;
     background: rgb(250, 250, 250);
+    position: relative;
+    z-index: 10;
     flex-wrap: wrap;
     display: flex;
 
