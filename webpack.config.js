@@ -109,9 +109,7 @@ module.exports = {
             name: 'Weather',
             short_name: 'Weather',
             display: 'standalone',
-            background_color: '#7768E5',
-            "theme-color": '#7768E5',
-            crossorigin: 'use-credentials',
+            background_color: 'red',
         })
     ]
 };
