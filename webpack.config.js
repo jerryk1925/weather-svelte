@@ -130,7 +130,13 @@ module.exports = {
             name: 'Weather',
             short_name: 'Weather',
             display: 'standalone',
-            background_color: 'red',
+            background_color: '#7967DF',
+            icons: [
+                {
+                    src: path.resolve('src/assets/svg/rain.png'),
+                    sizes: [96, 128, 192, 256, 384, 512]
+                },
+            ]
         })
     ]
 };
