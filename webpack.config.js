@@ -133,7 +133,7 @@ module.exports = {
             background_color: '#7967DF',
             icons: [
                 {
-                    src: path.resolve('src/assets/svg/rain.png'),
+                    src: path.resolve('src/assets/svg/rain.svg'),
                     sizes: [96, 128, 192, 256, 384, 512]
                 },
             ]
