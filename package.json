@@ -11,7 +11,7 @@
     "core-js": "^3.6.4",
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
-    "svelte": "3.20.1",
+    "svelte": "3.49.0",
     "svg-inline-loader": "^0.8.2"
   },
   "devDependencies": {
